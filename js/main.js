@@ -11,27 +11,36 @@ let btnPlay = document.getElementById('play_btn');
 //? recupero il parent di dove voglio inserire gli elementi creati
 let gridContainer = document.querySelector('.grid_container');
 
-//?recupero il value dell'input del'user_choice
-let userChoice = document.getElementById('user_choice').value ;
-     if(userChoice === 'easy'){
-        userChoice = 100;
-    }else if(userChoice === 'medium'){
-        userChoice = 81;
-    }else{
-        userChoice = 49;
-    }
-    
+
 //*creo addEvenLIsener sul btn
 btnPlay.addEventListener('click',function(){
+
+    //?recupero il value dell'input del'user_choice
+ let userChoice = document.getElementById('user_choice').value ;
+ console.log(userChoice)
+if(userChoice.value == 'hard'){
+   gridSize = 49;
+   //?gli assegno la classe che voglio inportare
+   newBox.classList.add('box','box_hard');
+
+}else if(userChoice.value == 'medium'){
+   gridSize = 81;
+   //?gli assegno la classe che voglio inportare
+   newBox.classList.add('box','box_medium');
    
-    console.log(userChoice);
-    serialNumber(parseInt(userChoice));
+}else{
+   gridSize = 100;
+}
+console.log(gridSize);
+
+
+    serialNumber(gridSize);
 } )
 
 
     
 function serialNumber (ncels){
-
+    gridContainer.innerHTML= '';
     //?creo un ciclo for iniziannizandolo a 0 fino 
     for(let i = 1 ; i <= ncels ; i++){
         //? creo l'elemto da inportare nell'html
@@ -53,6 +62,7 @@ function serialNumber (ncels){
         })
     }
 }
+
 function addToToggleClass(elemnt , className){
     elemnt.classList.toggle(className);
 }
