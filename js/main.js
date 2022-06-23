@@ -11,10 +11,21 @@ let btnPlay = document.getElementById('play_btn');
 //? recupero il parent di dove voglio inserire gli elementi creati
 let gridContainer = document.querySelector('.grid_container');
 
-
+//?recupero il value dell'input del'user_choice
+let userChoice = document.getElementById('user_choice').value ;
+     if(userChoice === 'easy'){
+        userChoice = 100;
+    }else if(userChoice === 'medium'){
+        userChoice = 81;
+    }else{
+        userChoice = 49;
+    }
+    
 //*creo addEvenLIsener sul btn
 btnPlay.addEventListener('click',function(){
-    serialNumber(100);
+   
+    console.log(userChoice);
+    serialNumber(parseInt(userChoice));
 } )
 
 
