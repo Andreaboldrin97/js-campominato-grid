@@ -18,7 +18,7 @@ main{
     height: calc(100% / 10);
     display: flex;
     border: 2px solid white;
-    cursor: crosshair;
+    cursor: pointer;
     color: black;
     display: flex;
     justify-content: center;
