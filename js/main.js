@@ -21,24 +21,26 @@ btnPlay.addEventListener('click',function(){
  
 if(userChoice == 'hard'){
    gridSize = 49;
+   difficult = 'hard'
   
 
 }else if(userChoice == 'medium'){
    gridSize = 81;
-   
+   difficult = 'medium'
 
 }else{
    gridSize = 100;
+   difficult = 'easy'
 }
 console.log(gridSize);
 
 
-    serialNumber(gridSize);
+    serialNumber(gridSize , difficult);
 } )
 
 
     
-function serialNumber (ncels){
+function serialNumber (ncels , diff ){
     gridContainer.innerHTML= '';
     //?creo un ciclo for iniziannizandolo a 0 fino 
     for(let i = 1 ; i <= ncels ; i++){
@@ -51,6 +53,14 @@ function serialNumber (ncels){
          //? dichiaro l'elemento creato al valore di i
         newBox.innerHTML = i;
         console.log(i);
+        if( diff == 'hard'){
+            newBox.classList.add('box','box_hard');
+         }else if(diff  == 'medium'){
+            newBox.classList.add('box','box_medium');
+         
+         }else{
+            
+         }
         //?importo l'elemento creato
         gridContainer.append(newBox);
 
