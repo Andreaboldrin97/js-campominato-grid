@@ -12,4 +12,8 @@ let btnPlay = document.getElementById('play_btn');
 btnPlay.addEventListener('click',function(){
 
     //? creo l'elemto da inportare nell'html
+    let newBox =document.createElement('div');
+
+    //?gli assegno la classe che voglio inportare
+    newBox.classList.add('box')
 })
