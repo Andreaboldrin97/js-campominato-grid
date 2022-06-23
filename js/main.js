@@ -14,9 +14,15 @@ let gridContainer = document.querySelector('.grid_container');
 
 //*creo addEvenLIsener sul btn
 btnPlay.addEventListener('click',function(){
+    serialNumber(100);
+} )
+
+
+    
+function serialNumber (ncels){
 
     //?creo un ciclo for iniziannizandolo a 0 fino 
-    for(let i = 1 ; i <= 100 ; i++){
+    for(let i = 1 ; i <= ncels ; i++){
         //? creo l'elemto da inportare nell'html
         let newBox =document.createElement('div');
 
@@ -30,18 +36,12 @@ btnPlay.addEventListener('click',function(){
         //?importo l'elemento creato
         gridContainer.append(newBox);
 
-        //*recupero le box dal dom e lo assoccio ad una variabile
-        let box = document.querySelectorAll('.box');
-        console.log(box[i]);
 
-        box.addEventListener('click',function(){
-            addToToggleClass(box[i],box_active);
+        newBox.addEventListener('click',function(){
+            addToToggleClass(newBox,'box_active');
         })
     }
-})
-
-function addToToggleClass(elemnt , className){
-    elemnt.classList.toggle('className');
 }
-    
-
+function addToToggleClass(elemnt , className){
+    elemnt.classList.toggle(className);
+}
