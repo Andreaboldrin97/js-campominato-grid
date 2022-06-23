@@ -29,9 +29,19 @@ btnPlay.addEventListener('click',function(){
 
         //?importo l'elemento creato
         gridContainer.append(newBox);
+
+        //*recupero le box dal dom e lo assoccio ad una variabile
+        let box = document.querySelectorAll('.box');
+        console.log(box[i]);
+
+        box.addEventListener('click',function(){
+            addToToggleClass(box[i],box_active);
+        })
     }
 })
 
-
+function addToToggleClass(elemnt , className){
+    elemnt.classList.toggle('className');
+}
     
 
