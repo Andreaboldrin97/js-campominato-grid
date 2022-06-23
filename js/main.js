@@ -8,12 +8,29 @@
 //*recupero il buttun dal dom e lo assoccio ad una variabile
 let btnPlay = document.getElementById('play_btn');
 
+//? recupero il parent di dove voglio inserire gli elementi creati
+let gridContainer = document.querySelector('.grid_container');
+
+
 //*creo addEvenLIsener sul btn
 btnPlay.addEventListener('click',function(){
 
-    //? creo l'elemto da inportare nell'html
+    //?creo un ciclo for iniziannizandolo a 0 fino 
+       for(let i=1 ; i <= 100 ; i++){
+     //? creo l'elemto da inportare nell'html
     let newBox =document.createElement('div');
 
     //?gli assegno la classe che voglio inportare
-    newBox.classList.add('box')
+    newBox.classList.add('box');
+
+     //? dichiaro l'elemento creato al valore di i
+        newBox.innerHTML = i;
+        console.log(i);
+
+    //?importo l'elemento creato
+    gridContainer.append(newBox[i]);
+    }
+
 })
+
+

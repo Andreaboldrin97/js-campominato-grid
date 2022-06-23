@@ -4,6 +4,9 @@ header{
 img{
     width: 100px;
 }
+main{
+    background-color: blueviolet;
+}
 .grid_container{
     background-color: blue;
     margin: 0 auto;
@@ -11,16 +14,14 @@ img{
     height: 650px;
 }
 .box{
+    width: calc(100% / 10);
+    height: calc(100% / 10);
     display: flex;
     border: 2px solid white;
     cursor: crosshair;
 }
 
 /* box in base al livello */
-.box_easy{
-    width: calc(100% / 10);
-    height: calc(100% / 10);
-}
 .box_medium{
     width: calc(100% / 9);
     height: calc(100% / 9);
