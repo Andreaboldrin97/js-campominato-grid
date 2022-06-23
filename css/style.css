@@ -17,8 +17,12 @@ main{
     width: calc(100% / 10);
     height: calc(100% / 10);
     display: flex;
-    border: 2px solid white;
+    border: 1px solid white;
     cursor: crosshair;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* box in base al livello */
