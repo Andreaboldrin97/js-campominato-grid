@@ -18,16 +18,15 @@ btnPlay.addEventListener('click',function(){
     //?recupero il value dell'input del'user_choice
  let userChoice = document.getElementById('user_choice').value ;
  console.log(userChoice)
-if(userChoice.value == 'hard'){
+ 
+if(userChoice == 'hard'){
    gridSize = 49;
-   //?gli assegno la classe che voglio inportare
-   newBox.classList.add('box','box_hard');
+  
 
-}else if(userChoice.value == 'medium'){
+}else if(userChoice == 'medium'){
    gridSize = 81;
-   //?gli assegno la classe che voglio inportare
-   newBox.classList.add('box','box_medium');
    
+
 }else{
    gridSize = 100;
 }
@@ -52,7 +51,6 @@ function serialNumber (ncels){
          //? dichiaro l'elemento creato al valore di i
         newBox.innerHTML = i;
         console.log(i);
-
         //?importo l'elemento creato
         gridContainer.append(newBox);
 
