@@ -66,8 +66,11 @@ function serialNumber (ncels , diff ){
 
 
         newBox.addEventListener('click',function(){
-            addToToggleClass(newBox,'box_active');
-        })
+            addToToggleClass(newBox,'box_active'); 
+        }
+        //! aggiunta parametro di .addEventListener per non rendere piu cliccabile un elemento
+        , {once: true});
+        
     }
 }
 
