@@ -20,8 +20,9 @@ btnPlay.addEventListener('click',function(){
     let difficult
 
     //?recupero il value dell'input del'user_choice
- let userChoice = document.getElementById('user_choice').value ;
- console.log(userChoice)
+    let userChoice = document.getElementById('user_choice').value ;
+    console.log(userChoice)
+
  //! if sulla scelta del cliente
 if(userChoice === 'hard'){
     //!numero di caselle
@@ -43,6 +44,8 @@ console.log(gridSize);
 
 //!chiamo la funzione con i paremetri che voglio inserire
     serialNumber(gridSize , difficult);
+
+    
 } )
 
 
@@ -63,7 +66,6 @@ function serialNumber (ncels , diff ){
 
          //? dichiaro l'elemento creato al valore di i
         newBox.innerHTML = i;
-        console.log(i);
 
         //!in base alla difficolta si aggiunge una classe relativa alla grandezza dei box
         if( diff == 'hard'){
@@ -82,6 +84,8 @@ function serialNumber (ncels , diff ){
 
             //?aggiungo la classe box_active per il cambio colore
             addToToggleClass(newBox,'box_active'); 
+
+            console.log(`hai clicccato l'elemento ${i}`);
         }
         //! aggiunta parametro di .addEventListener per non rendere piu cliccabile un elemento
         , {once: true});
