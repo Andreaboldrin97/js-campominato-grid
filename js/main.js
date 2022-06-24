@@ -15,17 +15,21 @@ let gridContainer = document.querySelector('.grid_container');
 //*creo addEvenLIsener sul btn
 btnPlay.addEventListener('click',function(){
 
+    //*creo le due variabili di difficolta vuote
+    let gridSize;
+    let difficult
+
     //?recupero il value dell'input del'user_choice
  let userChoice = document.getElementById('user_choice').value ;
  console.log(userChoice)
  //! if sulla scelta del cliente
-if(userChoice == 'hard'){
+if(userChoice === 'hard'){
     //!numero di caselle
    gridSize = 49;
    difficult = 'hard'
   
 
-}else if(userChoice == 'medium'){
+}else if(userChoice === 'medium'){
     //!numero di caselle
    gridSize = 81;
    difficult = 'medium'
