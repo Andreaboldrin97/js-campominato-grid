@@ -85,6 +85,7 @@ function serialNumber (ncels , diff ){
             //?aggiungo la classe box_active per il cambio colore
             addToToggleClass(newBox,'box_active'); 
 
+            //*stampo in console il numero dell'elemento selezionato
             console.log(`hai clicccato l'elemento ${i}`);
         }
         //! aggiunta parametro di .addEventListener per non rendere piu cliccabile un elemento
